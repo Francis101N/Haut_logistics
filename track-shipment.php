@@ -1,3 +1,6 @@
+<?php
+ini_set('display_errors', 0); // Disable error output to the browser
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -202,28 +205,38 @@ new WOW().init();
                     <div class="contact_form-left">
                         <div class="contact_form-left-head">Packages Tracking</div>
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="contact_form-row">
-                                    <p>Tracking ID</p>
-                                    <input type="text" placeholder="Enter tracking ID number">
+                         <form action="tracking-order.php" method="post">
+                                <div class="row">
+
+                                    <?php if($error) { ?>
+                                    <div class="col-md-12">
+                                        <div class="alert alert-danger"> <?php echo $error; ?></div>
+                                    </div>
+                                    <?php } ?><br>
+
+                                    <div class="col-md-12">
+                                        <div class="contact_form-row">
+                                            <p>Tracking ID</p>
+                                            <input type="text" name="tracking_no"
+                                                placeholder="Enter tracking ID number e.g A12345677" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="contact_form-row">
+                                            <p>Email Address</p>
+                                            <input type="email" name="email" placeholder="Enter Email Address" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="btn-sec">
+                                            <button style="width: 100%;" type="submit">Track & Trace</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12" style="margin-top: 30px;">
+                                        <img src="./dist/images/w-map.png" class="img-fluid">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="contact_form-row">
-                                    <p>Email Address</p>
-                                    <input type="email" placeholder="Enter Email Address">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="btn-sec">
-                                    <a href="tracking-order"><button style="width: 100%;">Track & Trace</button></a>
-                                </div>
-                            </div>
-                            <div class="col-md-12" style="margin-top: 30px;">
-                                <img src="./dist/images/w-map.png" class="img-fluid">
-                            </div>
-                        </div>
+                            </form>
                     </div>
                 </div>
                 <div class="col-md-3">

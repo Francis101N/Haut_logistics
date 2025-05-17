@@ -7,7 +7,7 @@
                         <div class="footer-logo">
                             <a href="./"><img src="./dist/images/logo.png" class="img-fluid"></a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur. Quam nunc vivamus eget ipsum.</p>
+                        <p>Haut Logistics provides efficient global logistics solutions, specializing in air, sea, and land transport, along with warehousing and freight forwarding services. Fast, secure, and cost-efficient.</p>
                         <div class="footer-icons">
                             <a href=""><img src="./dist/images/fa1.png" class="img-fluid"></a>
                             <a href=""><img src="./dist/images/fa2.png" class="img-fluid"></a>
@@ -56,7 +56,7 @@
                 <div class="col-md-3">
                     <div class="footer-top-row2">
                         <div class="footer-head">OUR NEWSLETTER</div>
-                        <p>Lorem idolo rconsectetur. Morbi id tristique hyui pellentesque in odio ve.</p>
+                        <p>Subscribe to our newsletter for the latest updates, industry insights, and exclusive offers from Haut Logistics.</p>
                         <input type="text" placeholder="Enter email">
                         <button>Submit</button>
                     </div>

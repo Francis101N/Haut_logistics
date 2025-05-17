@@ -115,8 +115,8 @@ new WOW().init();
                                     <img src="./dist/images/ha-icon1.png" class="img-fluid">
                                 </div>
                                 <div class="home-about-box-content-head">Air Frieght</div>
-                                <p>Lorem ipsum dolor sit amet consectetur. Varius scelerisque enim vitae a dignissim cras enim quis augue.</p>
-                                <a href="air-frieight">Learn more>></a>
+                                <p>Fast & Secure Global Air Cargo Services.</p>
+                                <a href="air-frieight.php">Learn more>></a>
                             </div>
                         </div>
                         
@@ -126,8 +126,8 @@ new WOW().init();
                                     <img src="./dist/images/ha-icon2.png" class="img-fluid">
                                 </div>
                                 <div class="home-about-box-content-head">Sea Freight</div>
-                                <p>Lorem ipsum dolor sit amet consectetur. Varius scelerisque enim vitae a dignissim cras enim quis augue.</p>
-                                <a href="sea-freight">Learn more>></a>
+                                <p>Cost-Effective Ocean Shipping for Global Trade.</p>
+                                <a href="sea-freight.php">Learn more>></a>
                             </div>
                         </div>
                         
@@ -137,8 +137,8 @@ new WOW().init();
                                     <img src="./dist/images/ha-icon3.png" class="img-fluid">
                                 </div>
                                 <div class="home-about-box-content-head">Land Frieght</div>
-                                <p>Lorem ipsum dolor sit amet consectetur. Varius scelerisque enim vitae a dignissim cras enim quis augue.</p>
-                                <a href="land-freight">Learn more>></a>
+                                <p>Reliable Ground Transportation Across All Routes.</p>
+                                <a href="land-freight.php">Learn more>></a>
                             </div>
                         </div>
                     </div>
@@ -231,12 +231,15 @@ new WOW().init();
 
 <div class="track-shipments">
     <div class="container">
-        <div class="track-shipments-head">Track Your Shipment</div>
-        <input type="text" placeholder="Enter Tracking Number" style="margin-bottom: 20px;">
-        <input type="mail" placeholder="Enter Email Address">
-        <div class="btn-pry" style="margin-top: 20px;">
-            <a href="tracking-order"><button>Track & Trace</button></a>
-        </div>
+        <form action="tracking-order.php" method="post">
+                <div class="track-shipments-head">Track Your Shipment</div>
+                <input type="text" name="tracking_no" placeholder="Enter Tracking Number" style="margin-bottom: 20px;"
+                    required>
+                <input type="mail" name="email" placeholder="Enter Email Address" required>
+                <div class="btn-pry" style="margin-top: 20px;">
+                    <button type="submit">Track & Trace</button>
+                </div>
+        </form>
     </div>
 </div>
 
@@ -591,9 +594,9 @@ new WOW().init();
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="home_testimonial-right-content-body">
-                                                <p>Lorem ipsum dolor sit amet consectetur. Dictumst pharetra enim pellentesque amet pharetra velit. Nisl semper mi praesent at lacus congue elementum.</p>
-                                                <div class="home_testimonial-right-content-body-head">James Randle</div>
-                                                <div class="home_testimonial-right-content-body-sub">Manager</div>
+                                                <p>Haut Logistics has been an essential partner for our global shipping needs. Their team is always responsive and ensures our products are delivered on time, no matter the complexity of the shipment. Their attention to detail and commitment to service is unparalleled.</p>
+                                                <div class="home_testimonial-right-content-body-head">Sarah Thompson</div>
+                                                <div class="home_testimonial-right-content-body-sub">CEO, TechWave Inc.</div>
                                             </div>                                            
                                         </div>
                                     </div>
@@ -602,9 +605,9 @@ new WOW().init();
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="home_testimonial-right-content-body">
-                                                <p>Lorem ipsum dolor sit amet consectetur. Dictumst pharetra enim pellentesque amet pharetra velit. Nisl semper mi praesent at lacus congue elementum.</p>
-                                                <div class="home_testimonial-right-content-body-head">James Randle</div>
-                                                <div class="home_testimonial-right-content-body-sub">Manager</div>
+                                                <p>As a growing business, we rely on Haut Logistics for both our domestic and international shipping needs. Their seamless logistics solutions and excellent customer support make our operations run smoothly, and we couldn’t be more satisfied with their service.</p>
+                                                <div class="home_testimonial-right-content-body-head">Mark Johnson </div>
+                                                <div class="home_testimonial-right-content-body-sub"> Operations Manager, GreenGro Enterprises</div>
                                             </div>                                            
                                         </div>
                                     </div>
@@ -613,9 +616,9 @@ new WOW().init();
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="home_testimonial-right-content-body">
-                                                <p>Lorem ipsum dolor sit amet consectetur. Dictumst pharetra enim pellentesque amet pharetra velit. Nisl semper mi praesent at lacus congue elementum.</p>
-                                                <div class="home_testimonial-right-content-body-head">James Randle</div>
-                                                <div class="home_testimonial-right-content-body-sub">Manager</div>
+                                                <p>Working with Haut Logistics has been a game-changer for our supply chain operations. From warehousing to distribution, they’ve helped streamline our processes and ensure that our products are delivered safely and on schedule, every time.</p>
+                                                <div class="home_testimonial-right-content-body-head">Emily Rodriguez </div>
+                                                <div class="home_testimonial-right-content-body-sub">Director of Supply Chain, Fresh Foods Ltd.</div>
                                             </div>                                            
                                         </div>
                                     </div>
@@ -624,9 +627,20 @@ new WOW().init();
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="home_testimonial-right-content-body">
-                                                <p>Lorem ipsum dolor sit amet consectetur. Dictumst pharetra enim pellentesque amet pharetra velit. Nisl semper mi praesent at lacus congue elementum.</p>
-                                                <div class="home_testimonial-right-content-body-head">James Randle</div>
-                                                <div class="home_testimonial-right-content-body-sub">Manager</div>
+                                                <p>I’ve been using Haut Logistics for all our company’s relocation needs, and their professionalism and reliability have made them a trusted partner. They handle everything with care, ensuring smooth moves for our clients, whether it’s across the country or overseas.</p>
+                                                <div class="home_testimonial-right-content-body-head">James Walker</div>
+                                                <div class="home_testimonial-right-content-body-sub">Founder, MoveEase Relocation Services</div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item col-md-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="home_testimonial-right-content-body">
+                                                <p>Haut Logistics has consistently exceeded our expectations with their exceptional freight forwarding services. They handle our complex shipments with ease, ensuring that all documentation is managed efficiently, and our cargo reaches its destination without delay.</p>
+                                                <div class="home_testimonial-right-content-body-head">Michael Green</div>
+                                                <div class="home_testimonial-right-content-body-sub">Senior Logistics Coordinator, AutoParts Global</div>
                                             </div>                                            
                                         </div>
                                     </div>

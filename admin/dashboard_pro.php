@@ -2,11 +2,10 @@
 session_start();
 include('connect.php');
 
-$username = mysqli_real_escape_string($conn, $_POST['username']);
-$password = mysqli_real_escape_string($conn,$_POST['password']);
+$username = trim($_POST['username']);
+$password = trim($_POST['password']);
 
-if(!$username || !$password)
-{
+if (!$username || !$password) {
     $msg = 'error';
     $comment = 'Both Username and Password must be provided!';
     include('index.php');
@@ -18,30 +17,28 @@ if (!filter_var($username, FILTER_VALIDATE_EMAIL)) {
     $comment = 'Wrong Email Format!';
     include('index.php');
     exit;
-} 
-
-
-$query = "select Username, Password from admin where Username = '$username' and Password = '$password'";
-$result = mysqli_query($conn,$query);
-if (!$result){
-    echo 'error with your query';
-    exit;
 }
 
-$num = mysqli_num_rows($result);
+// Use prepared statement to safely query the database
+$stmt = $conn->prepare("SELECT Username, Password FROM admin WHERE Username = ? AND Password = ?");
+if ($stmt === false) {
+    die('Prepare failed: ' . htmlspecialchars($conn->error));
+}
 
-if ($num == 0){
+$stmt->bind_param("ss", $username, $password);
+$stmt->execute();
+$stmt->store_result();
+
+if ($stmt->num_rows === 0) {
     $msg = 'error';
     $comment = 'Error! No Information found!';
     include('index.php');
+    $stmt->close();
     exit;
-}
-else{
+} else {
     $_SESSION['valid_user'] = $username;
-    // $_SESSION['valid_name'] = $row['firstname'];
-    header('location:dashboard.php');
+    $stmt->close();
+    header('Location: dashboard.php');
     exit;
 }
-
-
 ?>

@@ -43,7 +43,7 @@ if($result)
 <td>&nbsp;</td>
 <td width="600">
   <div style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
-     <img src="IMAGES/a-professional-logo-with-the-name-franci_dPZ7HsBfTuC2KR44pHJddA_zUaFXsMYSimI6-WcjuXwPA.jpeg"><br><br>
+     <img src="cid:logoImage"><br><br>
       Dear '.$Fullnames.',<br><br>
       We are pleased to inform you that your shipping order has been successfully processed.<br><br>
 
@@ -65,13 +65,13 @@ if($result)
 
 $mail = new PHPMailer();
 $mail->IsSMTP();    
-$mail->Port = 465;
+$mail->Port = 587;
 $mail->SMTPAuth = true;               
 //sendgrid
 $mail->Username='notification@nitaprivateaccess.net';
 $mail->Password = 'Aledoy@2025';  //yahoo app password for noreply email 
 $mail->Host='mail.nitaprivateaccess.net';
-$mail->SMTPSecure = 'ssl'; 
+$mail->SMTPSecure = 'tls'; 
 $mail->From = "notification@nitaprivateaccess.net";
 $mail->FromName =  "HAUT LOGISTICS";
 $mail->AddAddress($Email);
@@ -80,7 +80,7 @@ $mail->IsHTML(true);
 $mail->Body    = $body;
 $mail->Subject = $subject;
 $mail->IsHTML(true);
- $mail->AddEmbeddedImage('../dist/images/fav.png', 'logoImage'); 
+$mail->AddEmbeddedImage('../dist/images/fav.png', 'logoImage'); 
 $mail->Send();
 
 

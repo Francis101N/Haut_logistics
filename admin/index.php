@@ -41,6 +41,15 @@ ini_set('display_startup_errors', 0);
 
 <body>
     <style>
+    body{
+      margin: 0;
+      padding: 0;
+      background-image: url('../dist/images/admin_background_image.jpg'); 
+      background-size: cover;    
+      background-position: center; 
+      background-repeat: no-repeat; 
+      font-family: Arial, sans-serif;
+    }
     form {
         display: flex;
         justify-content: center;
@@ -53,10 +62,12 @@ ini_set('display_startup_errors', 0);
         margin: 0 auto;
         padding: 20px;
         height: 50px;
+        width: 450px;
     }
 
     input[type="password"] {
         height: 50px;
+        width: 450px;
     }
 
     .container {
@@ -66,7 +77,7 @@ ini_set('display_startup_errors', 0);
         place-items: center;
     }
     </style>
-    <h2 class="p-4" style="color:#013d5f;">
+    <h2 class="p-4" style="color:#ff4424;">
         <marquee behavior="alternate" direction="left">LOGISTICS COMPANY ADMIN</marquee>
     </h2>
     <form action="dashboard_pro.php" method="post">

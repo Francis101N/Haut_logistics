@@ -65,7 +65,7 @@ if(!$_SESSION['valid_user'])
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
-        <header class="topbar bg-danger" data-navbarbg="skin5">
+        <header class="topbar" data-navbarbg="skin5" style="background-color:#ff4424;">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin6">
                     <!-- ============================================================== -->
@@ -76,9 +76,9 @@ if(!$_SESSION['valid_user'])
 
                         <!--End Logo icon -->
                         <!-- Logo text -->
-                        <span class="logo-text">
+                        <span class="logo-text pt-2">
                             <!-- dark Logo text -->
-                            <img src="plugins/images/logistic-logo" style="width: 80px;" alt="homepage" />
+                            <img src="../dist/images/fav.png" style="width: 80px;" alt="homepage" />
                         </span>
                     </a>
                     <!-- ============================================================== -->
@@ -93,7 +93,7 @@ if(!$_SESSION['valid_user'])
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                <div class="navbar-collapse collapse bg-danger" id="navbarSupportedContent" data-navbarbg="skin5">
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5" style="background-color:#ff4424;">
                     <ul class="navbar-nav d-none d-md-block d-lg-none">
                         <li class="nav-item">
                             <a class="nav-toggler nav-link waves-effect waves-light text-white"
@@ -160,12 +160,12 @@ if(!$_SESSION['valid_user'])
             <div class="page-breadcrumb bg-white"><br>
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Add Order</h4>
+                        <h4 class="page-title" style="color:#013d5f;">Add Order</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                         <div class="d-md-flex">
                             <ol class="breadcrumb ms-auto">
-                                <li><a href="javascript:history.back();" class="fw-normal">Go Back</a></li>
+                                <li><a href="javascript:history.back();" class="fw-normal" style="color:#013d5f;">Go Back</a></li>
                             </ol>
 
                         </div>
@@ -186,7 +186,7 @@ if(!$_SESSION['valid_user'])
                 <div class="row">
                     <div class="col-md-12">
                         <div class="white-box">
-                            <h3 class="box-title">Add a new Order to the system</h3>
+                            <h3 class="box-title" style="color:#013d5f;">Add a new Order to the system</h3>
                             <form action="proc_order.php" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -270,7 +270,7 @@ if(!$_SESSION['valid_user'])
 
                                         <div class="myfields">
                                             <input type="submit" value="Add"
-                                                class="form-control btn btn-danger text-light">
+                                                class="form-control btn text-light" style="background-color:#013d5f;">
                                         </div>
                                     </div>
                                 </div>

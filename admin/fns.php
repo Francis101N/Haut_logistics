@@ -52,7 +52,7 @@ function get_progress($token)
     }
     elseif($status == 'Destination')
     {
-        return 90;
+        return 80;
     }
     elseif($status == 'Delivered')
     {

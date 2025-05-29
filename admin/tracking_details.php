@@ -52,7 +52,7 @@ $trackings_num = mysqli_num_rows($trackings_result);
     <title>LOGISTICS | Tracking Details</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../dist/images/fav.png">
     <!-- Custom CSS -->
     <link href="css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

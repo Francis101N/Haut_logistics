@@ -30,7 +30,7 @@ if(!$_SESSION['valid_user'])
     <title>LOGISTICS | change-password</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../dist/images/fav.png">
     <!-- Custom CSS -->
    <link href="css/style.min.css" rel="stylesheet">
    <link href="css/mystyle.css" rel="stylesheet">

@@ -56,7 +56,7 @@ if($_GET['id'])
     <title>LOGISTICS | Edit</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../dist/images/fav.png">
     <!-- Custom CSS -->
    <link href="css/style.min.css" rel="stylesheet">
    <link href="css/mystyle.css" rel="stylesheet">
@@ -86,8 +86,8 @@ if($_GET['id'])
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
-        <header class="topbar bg-danger" data-navbarbg="skin5">
-            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+        <header class="topbar" data-navbarbg="skin5" style="background-color:#ff4424;">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark" >
                 <div class="navbar-header" data-logobg="skin6">
                     <!-- ============================================================== -->
                     <!-- Logo -->
@@ -97,9 +97,9 @@ if($_GET['id'])
                         
                         <!--End Logo icon -->
                         <!-- Logo text -->
-                        <span class="logo-text">
+                        <span class="logo-text pt-2">
                             <!-- dark Logo text -->
-                            <img src="plugins/images/logistic-logo" style="width: 80px;" alt="homepage" />
+                            <img src="../dist/images/fav.png" style="width: 80px;" alt="homepage" />
                         </span>
                     </a>
                     <!-- ============================================================== -->
@@ -114,7 +114,7 @@ if($_GET['id'])
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                <div class="navbar-collapse collapse bg-danger" id="navbarSupportedContent" data-navbarbg="skin5">
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5" style="background-color:#ff4424;">
                     <ul class="navbar-nav d-none d-md-block d-lg-none">
                         <li class="nav-item">
                             <a class="nav-toggler nav-link waves-effect waves-light text-white"
@@ -272,7 +272,8 @@ if($_GET['id'])
                                         <input type="hidden" value="<?php echo $row['Token']; ?>" name="token">
                                     </div>
                                     <div class="myfields">
-                                        <input type="submit" value="Save Changes" class="form-control btn btn-danger text-light">
+                                       <input type="submit" value="Save Changes"
+                                                class="form-control btn text-light" style="background-color:#013d5f;">
                                     </div>
                                 </div>
 

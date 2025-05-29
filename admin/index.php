@@ -56,19 +56,21 @@ ini_set('display_startup_errors', 0);
         align-items: center;
     }
 
-    input[type="email"] {
-        position: relative;
-        display: block;
-        margin: 0 auto;
-        padding: 20px;
-        height: 50px;
-        width: 450px;
-    }
+input[type="email"],
+input[type="password"] {
+  padding: 15px;
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+}
 
-    input[type="password"] {
-        height: 50px;
-        width: 450px;
-    }
+@media (max-width: 768px) {
+   .form-group {
+    width: 100% !important;
+  }
+}
+
 
     .container {
         position: absolute;

@@ -145,7 +145,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                             <div class="accordion-arrow"></div>
                         </div>
-                        <div class="accordion-content">
+                        <div class="accordion-content" style="overflow-y:scroll;">
                             <div class="accordion-content-inner">
                                 <div class="accordion-content-inner-table">
                                     <div class="table-responsive">
@@ -268,17 +268,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="col-md-6">
                 <div class="tracking_map">
                     <div class="tracking_map-img">
-                        <?php 
-                        $query2 = "SELECT * FROM tracking_details WHERE order_token = '{$_POST['tracking_no']}'";
-                        $result2 = mysqli_query($conn,$query2);
-                        $row2 = mysqli_fetch_array($result2);
-
-                        $current_address = $row2['Location'];
-                        $encoded_address =urlencode($current_address);
-                        $map_url = "https://www.google.com/maps?q={$encoded_address}&output=embed";
-                        ?>
-                        <iframe src="<?php echo $map_url;?>" width="540" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+    <?php 
+    // Your PHP part to get tracking info if needed
+    $query2 = "SELECT * FROM tracking_details WHERE Order_token = '{$row['Token']}' ORDER BY id DESC LIMIT 1";
+    $result2 = mysqli_query($conn, $query2);
+    $row2 = mysqli_fetch_array($result2);
+    
+    $current_address = $row2['Location'];
+    $encoded_address = urlencode($current_address);
+    
+    // Default map url fallback to tracking location from DB
+    $default_map_url = "https://www.google.com/maps?q={$encoded_address}&output=embed";
+    ?>
+    
+    <iframe
+        id="map-frame"
+        src="<?php echo $default_map_url; ?>"
+        width="100%"
+        height="450"
+        style="border: 0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
                     <div class="tracking_map-box">
                         <div class="live_track">
                             <div class="live_track-icon">
